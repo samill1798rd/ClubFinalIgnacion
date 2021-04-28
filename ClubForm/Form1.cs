@@ -100,7 +100,7 @@ namespace ClubForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel(new form.so());
+            AbrirFormInPanel(new TipoSocioForm());
         }
 
         private void panelContenedor_Paint_1(object sender, PaintEventArgs e)

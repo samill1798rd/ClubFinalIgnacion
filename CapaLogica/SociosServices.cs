@@ -40,19 +40,34 @@ namespace CapaLogica
 
         public OperationResult<Socio> UpdateSocios(Socio socioModel)
         {
+            var fullname = $"{socioModel.Nombre} {socioModel.Apellido}";
+
             var operationResult = new OperationResult<Socio>();
-            var result = _DBContext.Socios.Find(socioModel.Id);
+            var result = _DBContext.Socios
+                                    .Find(socioModel.Id);
+
+            result.IdSocio = socioModel.IdSocio;
+            result.Nombre = socioModel.Nombre;
+            result.Apellido = socioModel.Apellido;
+            result.NombreCompleto = fullname;
+            result.Sexo = socioModel.Sexo;
+            result.Cedula = socioModel.Cedula;
+            result.Dirreccion = socioModel.Dirreccion;
+            result.Telefono = socioModel.Telefono;
+            result.Celular = socioModel.Celular;
+            result.Email = socioModel.Email;
+            //result.TipoSocio = GetTipoSocioById(result.IdTipoSocio);
 
             try
             {
-                _DBContext.Socios.Attach(socioModel);
-                _DBContext.Entry(socioModel).State = EntityState.Modified;
+                _DBContext.Socios.Attach(result);
+                _DBContext.Entry(result).State = EntityState.Modified;
                 _DBContext.SaveChanges();
-                operationResult = OperationResultOperation(socioModel, true);
+                operationResult = OperationResultOperation(result, true);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                operationResult = OperationResultOperation(socioModel, true);
+                operationResult = OperationResultOperation(result, true);
             }
 
             return operationResult;
@@ -79,6 +94,14 @@ namespace CapaLogica
             return sociosList;
         }
 
+        public TipoSocio GetTipoSocioById(int id)
+        {
+            var tipoSocio = _DBContext.TipoSocios
+                                      .Find(id);
+
+            return tipoSocio;
+        }
+
         public OperationResult<Socio> DelecteSocio(int id)
         {
             var operationResult = new OperationResult<Socio>();
@@ -97,9 +120,6 @@ namespace CapaLogica
 
             return operationResult;
         }
-
-
-
 
         private OperationResult<Socio> OperationResultOperation(Socio socioModel, bool status)
         {

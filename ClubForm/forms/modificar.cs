@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +16,11 @@ namespace ClubForm
 {
     public partial class modificar : Form
     {
-        
+        private SocioServices _socioServices;
         public modificar()
         {
             InitializeComponent();
+            _socioServices = new SocioServices();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -65,9 +68,27 @@ namespace ClubForm
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
+           var result = _socioServices.UpdateSocios(GetSocioModel());
+        }
 
+        private Socio GetSocioModel()
+        {
+            return new Socio()
+            {
+                Id = Convert.ToInt32(txtId.Text),
+                IdSocio = txtlCodigoSocio.Text,
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                Sexo = txtSexo.Text,
+                Cedula = txtCedula.Text,
+                Dirreccion = txtDirreccion.Text,
+                Telefono = txtTelefono.Text,
+                Celular = txtCelular.Text,
+                Email = txtCorreo.Text,
+                Estatus = 1
+            };
         }
     }
 }

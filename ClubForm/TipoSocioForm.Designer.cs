@@ -1,6 +1,6 @@
 ﻿namespace ClubForm
 {
-    partial class SociosForm
+    partial class TipoSocioForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btncerrar = new System.Windows.Forms.Label();
             this.listadoclientes = new System.Windows.Forms.GroupBox();
-            this.dgvSocios = new System.Windows.Forms.DataGridView();
+            this.dgvTipoSocio = new System.Windows.Forms.DataGridView();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnInsertar = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.NumericUp = new System.Windows.Forms.NumericUpDown();
             this.listadoclientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUp)).BeginInit();
@@ -55,9 +55,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Socios";
+            this.label1.Text = "Tipo Socio";
             // 
             // btncerrar
             // 
@@ -74,24 +74,24 @@
             // 
             // listadoclientes
             // 
-            this.listadoclientes.Controls.Add(this.dgvSocios);
+            this.listadoclientes.Controls.Add(this.dgvTipoSocio);
             this.listadoclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listadoclientes.Location = new System.Drawing.Point(27, 93);
             this.listadoclientes.Name = "listadoclientes";
             this.listadoclientes.Size = new System.Drawing.Size(576, 313);
             this.listadoclientes.TabIndex = 15;
             this.listadoclientes.TabStop = false;
-            this.listadoclientes.Text = "Listado de Socios";
+            this.listadoclientes.Text = "Lista de Catalogo de Socios";
             // 
-            // dgvSocios
+            // dgvTipoSocio
             // 
-            this.dgvSocios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSocios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvSocios.Location = new System.Drawing.Point(12, 40);
-            this.dgvSocios.Name = "dgvSocios";
-            this.dgvSocios.Size = new System.Drawing.Size(543, 246);
-            this.dgvSocios.TabIndex = 17;
+            this.dgvTipoSocio.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvTipoSocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoSocio.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvTipoSocio.Location = new System.Drawing.Point(12, 40);
+            this.dgvTipoSocio.Name = "dgvTipoSocio";
+            this.dgvTipoSocio.Size = new System.Drawing.Size(543, 246);
+            this.dgvTipoSocio.TabIndex = 17;
             // 
             // clienteBindingSource
             // 
@@ -163,9 +163,9 @@
             this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(61, 47);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.Size = new System.Drawing.Size(48, 15);
             this.label6.TabIndex = 61;
-            this.label6.Text = "Buscar Buscar:";
+            this.label6.Text = "Buscar:";
             // 
             // btnActualizar
             // 
@@ -191,7 +191,7 @@
             this.NumericUp.Size = new System.Drawing.Size(120, 20);
             this.NumericUp.TabIndex = 64;
             // 
-            // SociosForm
+            // TipoSocioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,11 +207,11 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SociosForm";
+            this.Name = "TipoSocioForm";
             this.Text = "clientes";
             this.Load += new System.EventHandler(this.clientes_Load);
             this.listadoclientes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSocio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             //((System.ComponentModel.ISupportInitialize)(this.prestamosDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUp)).EndInit();
@@ -224,7 +224,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label btncerrar;
         private System.Windows.Forms.GroupBox listadoclientes;
-        private System.Windows.Forms.DataGridView dgvSocios;
+        private System.Windows.Forms.DataGridView dgvTipoSocio;
         private System.Windows.Forms.BindingSource prestamosDataSetBindingSource;
 
         private System.Windows.Forms.BindingSource clienteBindingSource;

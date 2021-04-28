@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,11 @@ namespace ClubForm
     public partial class delete : Form
     {
 
-
+        private SocioServices _socioServices;
         public delete()
         {
             InitializeComponent();
+            _socioServices = new SocioServices();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -27,24 +29,20 @@ namespace ClubForm
 
         private void btndelete_Click(object sender, EventArgs e)
         {
+            var idSocio = Convert.ToInt32(txtId.Text);
+            var result = _socioServices.DelecteSocio(idSocio);
 
-            try
+            if (result.Success != false)
             {
-                //per.Id = txt0.Text;
-                //obj.eliminar(per);
-
-                MessageBox.Show("Persona Elimanada");
-               this.Close();
+                MessageBox.Show("Socio Elimanado");
+                this.Close();
             }
-
-            catch(Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.ToString());
-
+                MessageBox.Show("Error al eliminar Socio");
             }
-
         }
+
 
         private void delete_Load(object sender, EventArgs e)
         {

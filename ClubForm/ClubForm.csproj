@@ -88,9 +88,14 @@
     <Compile Include="forms\servicios.Designer.cs">
       <DependentUpon>servicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Library.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoSocioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoSocioForm.Designer.cs">
+      <DependentUpon>TipoSocioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SociosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +104,7 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\delete.resx">
       <DependentUpon>delete.cs</DependentUpon>
@@ -124,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TipoSocioForm.resx">
+      <DependentUpon>TipoSocioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SociosForm.resx">
       <DependentUpon>SociosForm.cs</DependentUpon>
     </EmbeddedResource>

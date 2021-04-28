@@ -40,15 +40,11 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtDirreccion = new System.Windows.Forms.TextBox();
             this.lblDirreccion = new System.Windows.Forms.Label();
-            this.dtPickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
-            this.cboxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.cboxTipoSocio = new System.Windows.Forms.ComboBox();
-            this.lblTipoSocio = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.ptb1 = new System.Windows.Forms.PictureBox();
             this.lblCedula = new System.Windows.Forms.Label();
@@ -58,6 +54,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptb1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +91,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(120, 289);
+            this.txtCorreo.Location = new System.Drawing.Point(120, 266);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(368, 20);
             this.txtCorreo.TabIndex = 89;
@@ -103,7 +100,7 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(64, 289);
+            this.lblCorreo.Location = new System.Drawing.Point(64, 266);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(50, 15);
             this.lblCorreo.TabIndex = 88;
@@ -111,7 +108,7 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(346, 263);
+            this.txtCelular.Location = new System.Drawing.Point(346, 240);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(142, 20);
             this.txtCelular.TabIndex = 87;
@@ -120,7 +117,7 @@
             // 
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.Location = new System.Drawing.Point(287, 265);
+            this.lblCelular.Location = new System.Drawing.Point(287, 242);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(53, 15);
             this.lblCelular.TabIndex = 86;
@@ -128,7 +125,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(120, 263);
+            this.txtTelefono.Location = new System.Drawing.Point(120, 240);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 20);
             this.txtTelefono.TabIndex = 85;
@@ -137,7 +134,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(52, 265);
+            this.lblTelefono.Location = new System.Drawing.Point(52, 242);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(62, 15);
             this.lblTelefono.TabIndex = 84;
@@ -145,7 +142,7 @@
             // 
             // txtDirreccion
             // 
-            this.txtDirreccion.Location = new System.Drawing.Point(120, 237);
+            this.txtDirreccion.Location = new System.Drawing.Point(120, 214);
             this.txtDirreccion.Name = "txtDirreccion";
             this.txtDirreccion.Size = new System.Drawing.Size(368, 20);
             this.txtDirreccion.TabIndex = 83;
@@ -154,18 +151,11 @@
             // 
             this.lblDirreccion.AutoSize = true;
             this.lblDirreccion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDirreccion.Location = new System.Drawing.Point(40, 239);
+            this.lblDirreccion.Location = new System.Drawing.Point(40, 216);
             this.lblDirreccion.Name = "lblDirreccion";
             this.lblDirreccion.Size = new System.Drawing.Size(74, 15);
             this.lblDirreccion.TabIndex = 82;
             this.lblDirreccion.Text = "Dirreccion  :";
-            // 
-            // dtPickerFechaNacimiento
-            // 
-            this.dtPickerFechaNacimiento.Location = new System.Drawing.Point(180, 211);
-            this.dtPickerFechaNacimiento.Name = "dtPickerFechaNacimiento";
-            this.dtPickerFechaNacimiento.Size = new System.Drawing.Size(308, 20);
-            this.dtPickerFechaNacimiento.TabIndex = 81;
             // 
             // lblFechaNac
             // 
@@ -173,9 +163,8 @@
             this.lblFechaNac.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.Location = new System.Drawing.Point(63, 216);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(111, 15);
+            this.lblFechaNac.Size = new System.Drawing.Size(0, 15);
             this.lblFechaNac.TabIndex = 80;
-            this.lblFechaNac.Text = "Fecha Nacimiento :";
             // 
             // txtCedula
             // 
@@ -183,17 +172,6 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(368, 20);
             this.txtCedula.TabIndex = 79;
-            // 
-            // cboxSexo
-            // 
-            this.cboxSexo.FormattingEnabled = true;
-            this.cboxSexo.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cboxSexo.Location = new System.Drawing.Point(120, 158);
-            this.cboxSexo.Name = "cboxSexo";
-            this.cboxSexo.Size = new System.Drawing.Size(220, 21);
-            this.cboxSexo.TabIndex = 78;
             // 
             // lblSexo
             // 
@@ -222,26 +200,6 @@
             this.txtApellido.Size = new System.Drawing.Size(220, 20);
             this.txtApellido.TabIndex = 76;
             // 
-            // cboxTipoSocio
-            // 
-            this.cboxTipoSocio.FormattingEnabled = true;
-            this.cboxTipoSocio.Items.AddRange(new object[] {
-            "1"});
-            this.cboxTipoSocio.Location = new System.Drawing.Point(120, 79);
-            this.cboxTipoSocio.Name = "cboxTipoSocio";
-            this.cboxTipoSocio.Size = new System.Drawing.Size(220, 21);
-            this.cboxTipoSocio.TabIndex = 74;
-            // 
-            // lblTipoSocio
-            // 
-            this.lblTipoSocio.AutoSize = true;
-            this.lblTipoSocio.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoSocio.Location = new System.Drawing.Point(44, 81);
-            this.lblTipoSocio.Name = "lblTipoSocio";
-            this.lblTipoSocio.Size = new System.Drawing.Size(70, 15);
-            this.lblTipoSocio.TabIndex = 73;
-            this.lblTipoSocio.Text = "Tipo Socio :";
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -257,6 +215,7 @@
             this.btnRegistrar.TabIndex = 72;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // ptb1
             // 
@@ -282,7 +241,7 @@
             // 
             this.lblCodigoSocio.AutoSize = true;
             this.lblCodigoSocio.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoSocio.Location = new System.Drawing.Point(27, 58);
+            this.lblCodigoSocio.Location = new System.Drawing.Point(27, 85);
             this.lblCodigoSocio.Name = "lblCodigoSocio";
             this.lblCodigoSocio.Size = new System.Drawing.Size(87, 15);
             this.lblCodigoSocio.TabIndex = 67;
@@ -290,7 +249,7 @@
             // 
             // txtlCodigoSocio
             // 
-            this.txtlCodigoSocio.Location = new System.Drawing.Point(120, 53);
+            this.txtlCodigoSocio.Location = new System.Drawing.Point(120, 80);
             this.txtlCodigoSocio.Name = "txtlCodigoSocio";
             this.txtlCodigoSocio.Size = new System.Drawing.Size(220, 20);
             this.txtlCodigoSocio.TabIndex = 64;
@@ -316,7 +275,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 29);
+            this.label1.Location = new System.Drawing.Point(90, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 15);
             this.label1.TabIndex = 91;
@@ -325,16 +284,24 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(120, 27);
+            this.txtId.Location = new System.Drawing.Point(120, 54);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(99, 20);
             this.txtId.TabIndex = 92;
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.Location = new System.Drawing.Point(120, 160);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(220, 20);
+            this.txtSexo.TabIndex = 94;
             // 
             // modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 371);
+            this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblError);
@@ -346,15 +313,11 @@
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.txtDirreccion);
             this.Controls.Add(this.lblDirreccion);
-            this.Controls.Add(this.dtPickerFechaNacimiento);
             this.Controls.Add(this.lblFechaNac);
             this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.cboxSexo);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.cboxTipoSocio);
-            this.Controls.Add(this.lblTipoSocio);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.ptb1);
             this.Controls.Add(this.lblCedula);
@@ -386,7 +349,6 @@
         private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblTipoSocio;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.PictureBox ptb1;
         private System.Windows.Forms.Label lblCedula;
@@ -397,13 +359,11 @@
         public System.Windows.Forms.TextBox txtCelular;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtDirreccion;
-        public System.Windows.Forms.DateTimePicker dtPickerFechaNacimiento;
         public System.Windows.Forms.TextBox txtCedula;
-        public System.Windows.Forms.ComboBox cboxSexo;
         public System.Windows.Forms.TextBox txtApellido;
-        public System.Windows.Forms.ComboBox cboxTipoSocio;
         public System.Windows.Forms.TextBox txtlCodigoSocio;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.TextBox txtSexo;
     }
 }

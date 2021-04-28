@@ -33,10 +33,7 @@ namespace ClubForm
 
         private void clientes_Load(object sender, EventArgs e)
         {
- 
-
-            var socioList = _socioServices.GetallSocios();
-            dgvSocios.DataSource = TableMaker(socioList);
+            ActualizarTabla();
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -54,15 +51,15 @@ namespace ClubForm
             {
                 frm.txtId.Text = dgvSocios.CurrentRow.Cells[0].Value.ToString();
                 frm.txtlCodigoSocio.Text = dgvSocios.CurrentRow.Cells[1].Value.ToString();
-                frm.txtNombre.Text = dgvSocios.CurrentRow.Cells[2].Value.ToString();
-                frm.txtApellido.Text = dgvSocios.CurrentRow.Cells[3].Value.ToString();
-                frm.txtNombre.Text = dgvSocios.CurrentRow.Cells[4].Value.ToString();
-                frm.cboxSexo.Text = (ComboBox)dgvSocios.CurrentRow.Cells[6].Value;
-                frm.txtlCodigoSocio.Text = dgvSocios.CurrentRow.Cells[1].Value.ToString();
-                //frm.txt2.Text = dgvSocios.CurrentRow.Cells[2].Value.ToString();
-                //frm.txt3.Text = dgvSocios.CurrentRow.Cells[3].Value.ToString();
-                //frm.txt4.Text = dgvSocios.CurrentRow.Cells[4].Value.ToString();
-                //frm.txt5.Text = dgvSocios.CurrentRow.Cells[5].Value.ToString();
+                frm.txtNombre.Text = dgvSocios.CurrentRow.Cells[3].Value.ToString();
+                frm.txtApellido.Text = dgvSocios.CurrentRow.Cells[4].Value.ToString();
+                //frm.txtNombre.Text = dgvSocios.CurrentRow.Cells[4].Value.ToString();
+                frm.txtSexo.Text = dgvSocios.CurrentRow.Cells[6].Value.ToString();
+                frm.txtCedula.Text = dgvSocios.CurrentRow.Cells[7].Value.ToString();
+                frm.txtDirreccion.Text = dgvSocios.CurrentRow.Cells[10].Value.ToString();
+                frm.txtTelefono.Text = dgvSocios.CurrentRow.Cells[11].Value.ToString();
+                frm.txtCelular.Text = dgvSocios.CurrentRow.Cells[12].Value.ToString();
+                frm.txtCorreo.Text = dgvSocios.CurrentRow.Cells[13].Value.ToString();
                 frm.ShowDialog();
 
             //    (item.Id,
@@ -93,12 +90,11 @@ namespace ClubForm
             frm.StartPosition = FormStartPosition.CenterParent;
             if (dgvSocios.SelectedRows.Count > 0)
             {
-                frm.txt0.Text = dgvSocios.CurrentRow.Cells[0].Value.ToString();
-                frm.txt1.Text = dgvSocios.CurrentRow.Cells[1].Value.ToString();
-                frm.txt2.Text = dgvSocios.CurrentRow.Cells[2].Value.ToString();
-                frm.txt3.Text = dgvSocios.CurrentRow.Cells[3].Value.ToString();
-                frm.txt4.Text = dgvSocios.CurrentRow.Cells[4].Value.ToString();
-                frm.txt5.Text = dgvSocios.CurrentRow.Cells[5].Value.ToString();
+                frm.txtId.Text = dgvSocios.CurrentRow.Cells[0].Value.ToString();
+                frm.txtIdSocio.Text = dgvSocios.CurrentRow.Cells[1].Value.ToString();
+                frm.txtCedula.Text = dgvSocios.CurrentRow.Cells[7].Value.ToString();
+                frm.txtFullName.Text = dgvSocios.CurrentRow.Cells[5].Value.ToString();
+                frm.txtTipoSocio.Text = dgvSocios.CurrentRow.Cells[2].Value.ToString();
                 frm.ShowDialog();
             }
             else
@@ -156,6 +152,16 @@ namespace ClubForm
 
             }
             return table;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarTabla();
+        }
+        private void ActualizarTabla()
+        {
+            var socioList = _socioServices.GetallSocios();
+            dgvSocios.DataSource = TableMaker(socioList);
         }
     }
 }
