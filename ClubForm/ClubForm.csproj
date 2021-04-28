@@ -64,11 +64,23 @@
     <Compile Include="forms\delete.Designer.cs">
       <DependentUpon>delete.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\DeleteTipoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\DeleteTipoSocio.Designer.cs">
+      <DependentUpon>DeleteTipoSocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Insertar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\Insertar.Designer.cs">
       <DependentUpon>Insertar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\InsertTipoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InsertTipoSocio.Designer.cs">
+      <DependentUpon>InsertTipoSocio.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Lista.cs">
       <SubType>Form</SubType>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="forms\modificar.Designer.cs">
       <DependentUpon>modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ModificarTipoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ModificarTipoSocio.Designer.cs">
+      <DependentUpon>ModificarTipoSocio.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\servicios.cs">
       <SubType>Form</SubType>
@@ -109,14 +127,23 @@
     <EmbeddedResource Include="forms\delete.resx">
       <DependentUpon>delete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\DeleteTipoSocio.resx">
+      <DependentUpon>DeleteTipoSocio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Insertar.resx">
       <DependentUpon>Insertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\InsertTipoSocio.resx">
+      <DependentUpon>InsertTipoSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Lista.resx">
       <DependentUpon>Lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\modificar.resx">
       <DependentUpon>modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ModificarTipoSocio.resx">
+      <DependentUpon>ModificarTipoSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\servicios.resx">
       <DependentUpon>servicios.cs</DependentUpon>

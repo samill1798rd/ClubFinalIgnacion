@@ -16,7 +16,7 @@ namespace CapaLogica
         {
             _DBContext = new ClubFinalEntities();
         }
-        public OperationResult<TipoSocio> CreateSocios(TipoSocio tipoSocioModel)
+        public OperationResult<TipoSocio> CreateTipoSocio(TipoSocio tipoSocioModel)
         {
             var operationResult = new OperationResult<TipoSocio>();
 
@@ -34,7 +34,7 @@ namespace CapaLogica
             return operationResult;
         }
 
-        public OperationResult<TipoSocio> UpdateSocios(TipoSocio tipoSocioModel)
+        public OperationResult<TipoSocio> UpdateTipoSocio(TipoSocio tipoSocioModel)
         {
 
             var operationResult = new OperationResult<TipoSocio>();
@@ -77,7 +77,7 @@ namespace CapaLogica
             return tipoSocio;
         }
 
-        public OperationResult<TipoSocio> DelecteSocio(int id)
+        public OperationResult<TipoSocio> DelecteTipoSocio(int id)
         {
             var operationResult = new OperationResult<TipoSocio>();
             var model = _DBContext.TipoSocios.Find(id);
@@ -88,7 +88,7 @@ namespace CapaLogica
                 _DBContext.SaveChanges();
                 operationResult = OperationResultOperation(model, true);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 operationResult = OperationResultOperation(model, true);
             }
