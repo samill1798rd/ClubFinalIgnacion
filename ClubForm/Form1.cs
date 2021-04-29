@@ -117,5 +117,12 @@ namespace ClubForm
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            form.Show();
+            this.Hide();
+        }
     }
 }
