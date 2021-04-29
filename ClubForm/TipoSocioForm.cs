@@ -33,7 +33,7 @@ namespace ClubForm
 
         private void clientes_Load(object sender, EventArgs e)
         {
-            ActualizarTabla();
+            ActualizarTabla(string.Empty);
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -80,8 +80,7 @@ namespace ClubForm
 
         private void txt0_TextChanged(object sender, EventArgs e)
         {
-    
-           
+            ActualizarTabla(txtSearch.Text);
         }
 
         private DataTable TableMaker(List<TipoSocio> tipoSociosList)
@@ -102,11 +101,11 @@ namespace ClubForm
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            ActualizarTabla();
+            ActualizarTabla(string.Empty);
         }
-        private void ActualizarTabla()
+        private void ActualizarTabla(string campo)
         {
-            var tipoSociosList = _tipoSocioService.GetallTipoSocios();
+            var tipoSociosList = _tipoSocioService.GetallTipoSocios(campo);
             dgvTipoSocio.DataSource = TableMaker(tipoSociosList);
         }
     }

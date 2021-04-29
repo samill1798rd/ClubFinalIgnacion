@@ -51,6 +51,7 @@
     <Compile Include="SociosServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoSocioService.cs" />
+    <Compile Include="UserServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

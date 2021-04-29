@@ -58,17 +58,23 @@ namespace CapaLogica
             return operationResult;
         }
 
-        public List<TipoSocio> GetallTipoSocios()
+        public List<TipoSocio> GetallTipoSocios(string campo)
         {
-            var tipoSocioList = _DBContext.TipoSocios
-                                      .OrderBy(x => x.IdTipoSocio)
-                                      //.Where(x => x.Estatus.Equals(1))
-                                      .ToList();
+            var query = new List<TipoSocio>();
 
-            return tipoSocioList;
+            if (campo.Equals(string.Empty))
+            {
+                query = _DBContext.TipoSocios.ToList();
+            }
+            else
+            {
+                query = _DBContext.TipoSocios.Where(x => x.Descripcion.StartsWith(campo)).ToList();
+            }
+
+            return query;
         }
 
-     
+
         public TipoSocio GetTipoSocioById(int id)
         {
             var tipoSocio = _DBContext.TipoSocios

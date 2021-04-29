@@ -56,7 +56,6 @@ namespace CapaLogica
             result.Telefono = socioModel.Telefono;
             result.Celular = socioModel.Celular;
             result.Email = socioModel.Email;
-            //result.TipoSocio = GetTipoSocioById(result.IdTipoSocio);
 
             try
             {
@@ -73,15 +72,21 @@ namespace CapaLogica
             return operationResult;
         }
 
-        public List<Socio> GetallSocios()
+        public List<Socio> GetallSocios(string campo)
         {
-            var sociosList = _DBContext.Socios
-                                      .Include("TipoSocio")                         
-                                      .OrderBy(x => x.Id)   
-                                      //.Where(x => x.Estatus.Equals(1))
-                                      .ToList();
+            var query = new List<Socio>();
+            if (campo.Equals(string.Empty))
+            {
+                query = _DBContext.Socios.ToList();
+            }
+            else
+            {
+                query = _DBContext.Socios.Where(x => x.Nombre.StartsWith(campo)
+                            || x.Apellido.StartsWith(campo)
+                            || x.Cedula.StartsWith(campo)).ToList();
+            }
 
-            return sociosList;
+            return query;
         }
 
         public List<TipoSocio> GetallTipoSocio()
